@@ -1,91 +1,12 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Didact+Gothic');
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -97,17 +18,7 @@ video {
 
 /* HTML5 display-role reset for older browsers */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
@@ -115,20 +26,15 @@ body {
     line-height: 1;
 }
 
-ol,
-ul {
+ol, ul {
     list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
     quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
 }
@@ -141,120 +47,326 @@ table {
 
 /* =====START CSS==== */
 
+* {
+    font-family: 'Didact Gothic', sans-serif;
+    line-height: 15pt;
+    letter-spacing: 1pt;
+    font-size: .80em;
+}
+
 body {
-    font-family: "didot", "Georgia", serif;
-    text-transform: uppercase;
-    font-weight: bold;
+    height: 100%;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
 }
 
 h1 {
-    font-size: 50pt;
-    line-height: 55px;
+    position: fixed;
+    font-size: 3.4em;
+    text-transform: uppercase;
+    margin: -2% 0 0 15%;
 }
 
 h2 {
-    font-size: 20pt;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-p {
-    font-family: "Helvetica", sans-serif;
-    font-weight: normal;
-    margin-top: 10px;
-    margin-left: 5px;
-    font-size: 10pt;
-    color: #787878;
+    font-size: 4em;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 60px;
 }
 
 a {
+    text-decoration: none;
     color: #000000;
-    text-decoration: none;
 }
 
-footer a:hover {
-    color: #ffffff;
+a:hover {
+    transform: translate(-2px, -2px);
+    background-color: #FFE98F;
 }
 
-ul {
-    list-style-type: circle;
-}
-
-ol {
-    list-style-type: decimal;
-}
-
-li {
-    font-family: "Helvetica", sans-serif;
-    font-weight: normal;
-    color: #ffd1c9;
-    line-height: 17px;
-}
-
-li a {
-    font-size: 10pt;
-    color: #787878;
-    text-decoration: none;
-}
-
-li a:hover {
-    color: #ffd1c9;
-}
-
-.onethird {
-    width: 30%;
-    padding: 12px;
-}
-
-.onefifth {
-    width: 250px;
-    ;
-}
-
-.fourfifths {
-    width: 60%;
-}
-
-.column {
-    float: left;
-}
-
-.row {
-    content: "";
-    display: table;
-    clear: both;
+header {
+    position: relative;
+    z-index: 99;
 }
 
 .center {
     margin: auto;
 }
 
-.fixedside {
-    height: 150px;
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 45%;
+}
+
+.fadeout {
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
+
+/*===== NAVIGATION ====*/
+
+nav {
     position: fixed;
-    padding-left: 25px;
-    margin-top: -4%;
-    /*check on bigger comp*/
-    text-align: left;
+    z-index: 100;
+    width: 350px;
+    top: 30px;
+    left: 65%;
+    visibility: hidden;
+    background-color: #ffffff;
 }
 
-.bannercon {
-    width: 100%;
-    text-align: center;
-    margin-top: 14%;
-}
-
-nav{
-  padding-bottom: 50px;
-}
-
-#fixedfoot {
+#navbar {
     position: fixed;
+    z-index: 98;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    height: 75px;
     width: 100%;
-    height: 40px;
-    bottom: 0px;
-    background-color: #ffd1c9;
-    padding-top: 15px;
-    font-size: 20pt;
+}
+
+
+/*===== ABOUT ME ====*/
+
+#aboutmepage.fadein {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+}
+
+main {
+    position: relative;
+    margin: 10%;
+    z-index: 0;
+}
+
+main .container {
+    position: absolute;
+    z-index: 1;
+}
+
+main article {
+    overflow: scroll;
+}
+
+main a {
+    margin-right: 20px;
+    font-size: 1.4em;
+}
+
+#aboutme-content {
+    position: fixed;
+    left: 115px;
+    top: 115px;
+    margin: 6%;
+    width: 70%;
+    height: 265px;
+}
+
+#bgblock {
+    position: fixed;
+    background-color: #FFE98F;
+    height: 400px;
+    width: 675px;
+    max-width: 80%;
+    left: 50%;
+    margin: 0 0 0 -337px;
+}
+
+#bgblock p {
+    position: fixed;
+    right: 170px;
+    bottom: 165px;
+}
+
+.titleanimation {
+    font-size: .7em;
+    transform: translate(-175px, -90px);
+    -webkit-transition: font-size 1s, transform 1s;
+    -moz-transition: font-size 1s, transform 1s;
+    -ms-transition: font-size 1s, transform 1s;
+    transition: font-size 1s, transform 1s;
+}
+
+.titleanimation-reverse {
+    font-size: 1em;
+    transform: translate(0px, 0px);
+    -webkit-transition: font-size 1s, transform 1s;
+    -moz-transition: font-size 1s, transform 1s;
+    -ms-transition: font-size 1s, transform 1s;
+    transition: font-size 1s, transform 1s;
+}
+
+.navlinks {
+    position: absolute;
+    z-index: 100;
+}
+
+
+/*===== WORKS ====*/
+
+.workpreview {
+    /*height: 100px;*/
+    width: 85%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.expand {
+    height: 100px;
+    overflow: hidden;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+.expand:hover {
+    height: 250px;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+.hoverbox, .hoverbox * {
+    box-sizing: border-box;
+}
+
+.hoverbox {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+.hoverbox .hoverbox-bottom {
+    display: block;
+}
+
+.hoverbox .hoverbox-top {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 232, 142, 0.8);
+    color: #fff;
+    padding: 15px;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.hoverbox:hover .hoverbox-top, .hoverbox.active .hoverbox-top {
+    opacity: 1;
+}
+
+.hoverbox .hoverbox-text {
+    color: #000000;
     text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 100%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.workimg {
+    max-width: 100%;
+}
+
+.sectionspace {
+    margin-bottom: 10px;
+}
+
+.pageintro {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+#workspage {
+    position: relative;
+    z-index: -1;
+    opacity: 0;
+    font-family: 'Didact Gothic', sans-serif;
+    line-height: 15pt;
+    letter-spacing: 1pt;
+    font-size: .80em;
+}
+
+#workspage.fadein {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+}
+
+#workspage.fadeout {
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in;
+    -moz-transition: opacity .5s ease-in;
+    -ms-transition: opacity .5s ease-in;
+    transition: opacity .5s ease-in;
+}
+
+
+/*===== CONTACS ====*/
+
+#contactpage {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 500px;
+    opacity: 0;
+    margin: 10% 10% 0 5%;
+    font-family: 'Didact Gothic', sans-serif;
+    line-height: 15pt;
+    letter-spacing: 1pt;
+    font-size: .80em;
+}
+
+#contactpage.fadein {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+}
+
+#contactpage.fadeout {
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in;
+    -moz-transition: opacity .5s ease-in;
+    -ms-transition: opacity .5s ease-in;
+    transition: opacity .5s ease-in;
+}
+
+.contactlink {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 200px;
 }
