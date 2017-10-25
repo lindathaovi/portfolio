@@ -29,10 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         mainnav.style.visibility = 'visible';
         bodyscroll.style.overflow = 'scroll';
 
-
-
         //fade in works page
-        // workspage.style.display='block';
         workspage.className = 'fadein';
         workspage.style.zIndex = '2';
         navworks.style.backgroundColor = '#FFE98F';
@@ -49,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
         titlename.className = 'titleanimation';
         mainnav.style.visibility = 'visible';
 
-
         //fade in contacts page
         contactpage.className = 'fadein';
         navcontact.style.backgroundColor = '#FFE98F';
@@ -62,13 +58,12 @@ document.addEventListener("DOMContentLoaded", function() {
         aboutmepage.className = 'fadeout';
         workslink.style.visibility = 'hidden';
         contactlink.style.visibility = 'hidden';
-        navcontact.style.backgroundColor = 'transparent';
+        navcontact.style.backgroundColor = 'transparent'; //no highlight in nav
 
         bodyscroll.style.overflow = 'scroll';
         workspage.className = 'fadein';
         workspage.style.zIndex = '2';
         navworks.style.backgroundColor = '#FFE98F';
-
 
     });
 
@@ -79,10 +74,9 @@ document.addEventListener("DOMContentLoaded", function() {
         workslink.style.visibility = 'hidden';
         contactlink.style.visibility = 'hidden';
         bodyscroll.style.overflow = 'hidden';
-        navworks.style.backgroundColor = 'transparent';
+        navworks.style.backgroundColor = 'transparent'; //no highlight in nav
         contactpage.className = 'fadein';
         navcontact.style.backgroundColor = '#FFE98F';
-
 
     });
 
@@ -92,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
         contactpage.className = 'fadeout';
         mainnav.style.visibility = 'hidden';
         bodyscroll.style.overflow = 'hidden';
-        navworks.style.backgroundColor = 'transparent';
+        navworks.style.backgroundColor = 'transparent'; //no highlight in nav
         navcontact.style.backgroundColor = 'transparent';
 
         workslink.style.visibility = 'visible';
@@ -102,6 +96,74 @@ document.addEventListener("DOMContentLoaded", function() {
         titlename.className = 'titleanimation-reverse';
 
     });
+
+    //MODAL displays more information about different works
+
+    var workmodal = document.getElementById('workmodal'); //calls entire modal
+    var modalbtn = document.getElementById('modal-close'); //modal close button
+    var modalimg = document.getElementById('modalimg');
+    var modaltitle = document.getElementById('modal-title'); //page title
+    var modalcontent = document.getElementById('modal-content');
+    //call each page link on works page
+    var wrkitsaight = document.getElementById('wrk-itsaight');
+    var wrkpaulrand = document.getElementById('wrk-paulrand');
+    var wrkworldswar = document.getElementById('wrk-worldswar');
+    var wrksocialcue = document.getElementById('wrk-socialcue');
+    var wrksavethewaves = document.getElementById('wrk-savethewaves');
+    var wrkcompose = document.getElementById('wrk-compose');
+    var wrkdap = document.getElementById('wrk-dap');
+    var wrk2016charity = document.getElementById('wrk-2016charity');
+    var wrk2015charity = document.getElementById('wrk-2015charity');
+    var wrk2014charity = document.getElementById('wrk-2014charity');
+    var wrkpathfinder = document.getElementById('wrk-pathfinder');
+    var wrkradition = document.getElementById('wrk-radiation');
+
+    var pageitsaight = document.getElementById('page-itsaight');
+    var pagepaulrand = document.getElementById('page-paulrand');
+
+
+
+    modalbtn.addEventListener('click', function() {
+        workmodal.style.display = 'none';
+
+        pageitsaight.style.display = 'none';
+        pagepaulrand.style.display = 'none';
+    });
+
+    // modalbtn.addEventListener('click', modalbtnclose);
+    //
+    // function modalbtnclose() {
+    //   workmodal.style.display = 'none';
+
+      //hides page content when modal closes
+    //   pageitsaight.style.display = 'none';
+    //   pagepaulrand.style.display = 'none';
+    // }
+
+    wrkitsaight.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        modalimg.src = "images/itsaight.png";
+        modaltitle.innerHTML = '#itsaight Campaign';
+        // modalcontent.innerHTML = '';
+        pageitsaight.style.display = 'block';
+
+    });
+
+    wrkpaulrand.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        modalimg.src= 'images/paulrand.png';
+        modaltitle.innerHTML = 'Paul Rand Redesign';
+        pagepaulrand.style.display = 'block';
+    });
+
+    wrkworldswar.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        modalimg.src= 'images/worldsatwar.png';
+        modaltitle.innerHTML = 'Video: Worlds at War';
+    });
+
+  
+
 
 
 
