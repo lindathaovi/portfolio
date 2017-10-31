@@ -125,26 +125,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
     modalbtn.addEventListener('click', function() {
+        modaltitle.scrollIntoView(true);
         workmodal.style.display = 'none';
         bgfade.style.display = 'none';
 
         pageitsaight.style.display = 'none';
         pagepaulrand.style.display = 'none';
+
+
+
+
     });
-
-    // modalbtn.addEventListener('click', modalbtnclose);
-    //
-    // function modalbtnclose() {
-    //   workmodal.style.display = 'none';
-
-      //hides page content when modal closes
-    //   pageitsaight.style.display = 'none';
-    //   pagepaulrand.style.display = 'none';
-    // }
-
-
-
 
 
     wrkitsaight.addEventListener('click', function() {
@@ -154,6 +147,9 @@ document.addEventListener("DOMContentLoaded", function() {
         modaltitle.innerHTML = '#itsaight Campaign';
         pageitsaight.style.display = 'block';
 
+
+
+
     });
 
     wrkpaulrand.addEventListener('click', function() {
@@ -162,6 +158,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         modaltitle.innerHTML = 'Paul Rand Redesign';
         pagepaulrand.style.display = 'block';
+
+
     });
 
     wrkworldswar.addEventListener('click', function() {

@@ -416,8 +416,12 @@ main a {
 }
 
 #workmodal article {
-    padding: 10%;
-    /*margin-top: 200px;*/
+    padding: 0% 10% 10% 10%;
+
+}
+
+#modal-title {
+  padding-top:10%;
 }
 
 #workmodal p {
