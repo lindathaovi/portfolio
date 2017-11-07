@@ -120,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var pageitsaight = document.getElementById('page-itsaight');
     var pagepaulrand = document.getElementById('page-paulrand');
+    
 
     var bgfade = document.getElementById('bgfade');
 
@@ -134,21 +135,15 @@ document.addEventListener("DOMContentLoaded", function() {
         pageitsaight.style.display = 'none';
         pagepaulrand.style.display = 'none';
 
-
-
-
     });
 
 
     wrkitsaight.addEventListener('click', function() {
         workmodal.style.display = 'block';
-        bgfade.style.display= 'block';
+        bgfade.style.display = 'block';
 
         modaltitle.innerHTML = '#itsaight Campaign';
         pageitsaight.style.display = 'block';
-
-
-
 
     });
 
@@ -158,19 +153,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         modaltitle.innerHTML = 'Paul Rand Redesign';
         pagepaulrand.style.display = 'block';
-
-
     });
 
     wrkworldswar.addEventListener('click', function() {
         workmodal.style.display = 'block';
-        modalimg.src= 'images/worldsatwar.png';
+        bgfade.style.display = 'block';
+
         modaltitle.innerHTML = 'Video: Worlds at War';
+
     });
-
-
-
-
 
 
 
