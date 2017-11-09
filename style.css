@@ -417,6 +417,7 @@ main a {
 
 #workmodal article {
     padding: 0% 10% 10% 10%;
+
 }
 
 #modal-title {
@@ -450,9 +451,9 @@ main a {
 }
 
 
-/*.space{
-  margin-top:60px;
-}*/
+.space{
+  margin-bottom:60px;
+}
 
 .one-third {
     width: 500px;
@@ -516,7 +517,7 @@ main a {
     width: 100%;
 }
 
-#page-itsaight, #page-paulrand {
+#page-itsaight, #page-paulrand, #page-wordsatwar {
     position: relative;
     display: none;
 }

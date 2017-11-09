@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //call each page link on works page
     var wrkitsaight = document.getElementById('wrk-itsaight');
     var wrkpaulrand = document.getElementById('wrk-paulrand');
-    var wrkworldswar = document.getElementById('wrk-worldswar');
+    var wrkwordsatwar = document.getElementById('wrk-wordsatwar');
     var wrksocialcue = document.getElementById('wrk-socialcue');
     var wrksavethewaves = document.getElementById('wrk-savethewaves');
     var wrkcompose = document.getElementById('wrk-compose');
@@ -120,7 +120,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var pageitsaight = document.getElementById('page-itsaight');
     var pagepaulrand = document.getElementById('page-paulrand');
-    
+    var pagewordsatwar = document.getElementById('page-wordsatwar');
+
 
     var bgfade = document.getElementById('bgfade');
 
@@ -134,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         pageitsaight.style.display = 'none';
         pagepaulrand.style.display = 'none';
+        pagewordsatwar.style.display = 'none';
 
     });
 
@@ -155,11 +157,12 @@ document.addEventListener("DOMContentLoaded", function() {
         pagepaulrand.style.display = 'block';
     });
 
-    wrkworldswar.addEventListener('click', function() {
+    wrkwordsatwar.addEventListener('click', function() {
         workmodal.style.display = 'block';
         bgfade.style.display = 'block';
 
-        modaltitle.innerHTML = 'Video: Worlds at War';
+        modaltitle.innerHTML = 'Video: Words at War';
+        pagewordsatwar.style.display = 'block';
 
     });
 
