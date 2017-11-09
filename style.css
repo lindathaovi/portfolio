@@ -494,6 +494,7 @@ main a {
     background-color: #FFE98F;
     padding: 3px 3px 3px 10px;
     margin-left: 10px;
+
 }
 
 #modal-close {
@@ -517,7 +518,7 @@ main a {
     width: 100%;
 }
 
-#page-itsaight, #page-paulrand, #page-wordsatwar {
+#page-itsaight, #page-paulrand, #page-wordsatwar, #page-socialcue {
     position: relative;
     display: none;
 }

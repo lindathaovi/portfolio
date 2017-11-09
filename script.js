@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var pageitsaight = document.getElementById('page-itsaight');
     var pagepaulrand = document.getElementById('page-paulrand');
     var pagewordsatwar = document.getElementById('page-wordsatwar');
+    var pagesocialcue = document.getElementById('page-socialcue');
 
 
     var bgfade = document.getElementById('bgfade');
@@ -136,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
         pageitsaight.style.display = 'none';
         pagepaulrand.style.display = 'none';
         pagewordsatwar.style.display = 'none';
+        pagesocialcue.style.display = 'none';
 
     });
 
@@ -163,6 +165,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         modaltitle.innerHTML = 'Video: Words at War';
         pagewordsatwar.style.display = 'block';
+
+    });
+
+    wrksocialcue.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        bgfade.style.display = 'block';
+
+        modaltitle.innerHTML = 'SocialCue';
+        pagesocialcue.style.display = 'block';
 
     });
 
