@@ -314,6 +314,7 @@ main a {
 
 .workimg {
     max-width: 100%;
+    width: 100%;
 }
 
 .pageintro {
@@ -417,7 +418,6 @@ main a {
 
 #workmodal article {
     padding: 0% 10% 10% 10%;
-
 }
 
 #modal-title {
@@ -450,9 +450,8 @@ main a {
     margin: 5px;
 }
 
-
-.space{
-  margin-bottom:60px;
+.space {
+    margin-bottom: 60px;
 }
 
 .one-third {
@@ -469,6 +468,7 @@ main a {
     position: fixed;
     left: 62%;
     top: 225px;
+    pointer-events: none;
 }
 
 .onethird {
@@ -494,7 +494,6 @@ main a {
     background-color: #FFE98F;
     padding: 3px 3px 3px 10px;
     margin-left: 10px;
-
 }
 
 #modal-close {
@@ -518,7 +517,7 @@ main a {
     width: 100%;
 }
 
-#page-itsaight, #page-paulrand, #page-wordsatwar, #page-socialcue {
+#page-itsaight, #page-paulrand, #page-wordsatwar, #page-socialcue, #page-savethewaves, #page-compoze, #page-dap, #page-2016charity, #page-2015charity, #page-2014charity {
     position: relative;
     display: none;
 }

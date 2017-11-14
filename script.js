@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var wrkwordsatwar = document.getElementById('wrk-wordsatwar');
     var wrksocialcue = document.getElementById('wrk-socialcue');
     var wrksavethewaves = document.getElementById('wrk-savethewaves');
-    var wrkcompose = document.getElementById('wrk-compose');
+    var wrkcompoze = document.getElementById('wrk-compose');
     var wrkdap = document.getElementById('wrk-dap');
     var wrk2016charity = document.getElementById('wrk-2016charity');
     var wrk2015charity = document.getElementById('wrk-2015charity');
@@ -122,6 +122,12 @@ document.addEventListener("DOMContentLoaded", function() {
     var pagepaulrand = document.getElementById('page-paulrand');
     var pagewordsatwar = document.getElementById('page-wordsatwar');
     var pagesocialcue = document.getElementById('page-socialcue');
+    var pagesavethewaves = document.getElementById('page-savethewaves');
+    var pagecompoze = document.getElementById('page-compoze');
+    var pagedap = document.getElementById('page-dap');
+    var page2016charity = document.getElementById('page-2016charity');
+    var page2015charity = document.getElementById('page-2015charity');
+    var page2014charity = document.getElementById('page-2014charity');
 
 
     var bgfade = document.getElementById('bgfade');
@@ -131,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     modalbtn.addEventListener('click', function() {
         modaltitle.scrollIntoView(true);
+        bodyscroll.style.overflow = 'scroll';
         workmodal.style.display = 'none';
         bgfade.style.display = 'none';
 
@@ -138,6 +145,12 @@ document.addEventListener("DOMContentLoaded", function() {
         pagepaulrand.style.display = 'none';
         pagewordsatwar.style.display = 'none';
         pagesocialcue.style.display = 'none';
+        pagesavethewaves.style.display = 'none';
+        pagecompoze.style.display = 'none';
+        pagedap.style.display = 'none';
+        page2016charity.display = 'none';
+        page2015charity.display = 'none';
+        page2014charity.display = 'none';
 
     });
 
@@ -145,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
     wrkitsaight.addEventListener('click', function() {
         workmodal.style.display = 'block';
         bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
 
         modaltitle.innerHTML = '#itsaight Campaign';
         pageitsaight.style.display = 'block';
@@ -154,6 +168,8 @@ document.addEventListener("DOMContentLoaded", function() {
     wrkpaulrand.addEventListener('click', function() {
         workmodal.style.display = 'block';
         bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
+
 
         modaltitle.innerHTML = 'Paul Rand Redesign';
         pagepaulrand.style.display = 'block';
@@ -162,6 +178,8 @@ document.addEventListener("DOMContentLoaded", function() {
     wrkwordsatwar.addEventListener('click', function() {
         workmodal.style.display = 'block';
         bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
+
 
         modaltitle.innerHTML = 'Video: Words at War';
         pagewordsatwar.style.display = 'block';
@@ -171,9 +189,78 @@ document.addEventListener("DOMContentLoaded", function() {
     wrksocialcue.addEventListener('click', function() {
         workmodal.style.display = 'block';
         bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
+
 
         modaltitle.innerHTML = 'SocialCue';
         pagesocialcue.style.display = 'block';
+
+    });
+
+    wrksavethewaves.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
+
+
+        modaltitle.innerHTML = 'Save the Waves';
+        pagesavethewaves.style.display = 'block';
+
+    });
+
+    wrkcompoze.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
+
+
+        modaltitle.innerHTML = 'Responsive Site Compoze';
+        pagecompoze.style.display = 'block';
+
+
+    });
+
+    wrkdap.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
+
+
+        modaltitle.innerHTML = 'M+M: Dakota Access Pipeline';
+        pagedap.style.display = 'block';
+
+    });
+
+    wrk2016charity.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
+
+
+        modaltitle.innerHTML = 'Lost in Wonderland';
+        page2016charity.style.display = 'block';
+
+    });
+
+    wrk2015charity.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
+
+
+        modaltitle.innerHTML = 'Let your Dreams Set Sail';
+        page2015charity.style.display = 'block';
+
+    });
+
+    wrk2014charity.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
+
+
+        modaltitle.innerHTML = 'Fly Away With Me';
+        page2014charity.style.display = 'block';
 
     });
 
