@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var wrk2015charity = document.getElementById('wrk-2015charity');
     var wrk2014charity = document.getElementById('wrk-2014charity');
     var wrkpathfinder = document.getElementById('wrk-pathfinder');
-    var wrkradition = document.getElementById('wrk-radiation');
+    // var wrkradition = document.getElementById('wrk-radiation');
 
     var pageitsaight = document.getElementById('page-itsaight');
     var pagepaulrand = document.getElementById('page-paulrand');
@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var page2016charity = document.getElementById('page-2016charity');
     var page2015charity = document.getElementById('page-2015charity');
     var page2014charity = document.getElementById('page-2014charity');
+    var pagepathfinder = document.getElementById('page-pathfinder');
 
 
     var bgfade = document.getElementById('bgfade');
@@ -151,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
         page2016charity.style.display = 'none';
         page2015charity.style.display = 'none';
         page2014charity.style.display = 'none';
+        pagepathfinder.style.display = 'none';
 
     });
 
@@ -261,6 +263,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
         modaltitle.innerHTML = 'Fly Away With Me';
         page2014charity.style.display = 'block';
+
+    });
+
+    wrkpathfinder.addEventListener('click', function() {
+        workmodal.style.display = 'block';
+        bgfade.style.display = 'block';
+        bodyscroll.style.overflow = 'hidden';
+
+
+        modaltitle.innerHTML = 'Davis Pathfinder';
+        pagepathfinder.style.display = 'block';
 
     });
 

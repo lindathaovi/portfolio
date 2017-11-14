@@ -136,9 +136,9 @@ header {
 nav {
     position: fixed;
     z-index: 100;
-    width: 350px;
+    width: 400px;
     top: 30px;
-    left: 65%;
+    right: 10%;
     visibility: hidden;
     background-color: #ffffff;
 }
@@ -354,8 +354,8 @@ main a {
 #contactpage {
     position: absolute;
     z-index: 2;
-    top: 0px;
-    left: 500px;
+    top: 15%;
+    left: 25%;
     opacity: 0;
     margin: 10% 10% 0 5%;
     font-family: 'Didact Gothic', sans-serif;
@@ -383,9 +383,20 @@ main a {
 .contactlink {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    height: 200px;
+    height: 100%;
+    margin-top: 50px;
+
+}
+
+
+#contactpage img{
+  width:200px;
+}
+
+#contactpage.container{
+  margin:auto;
 }
 
 
@@ -517,7 +528,7 @@ main a {
     width: 100%;
 }
 
-#page-itsaight, #page-paulrand, #page-wordsatwar, #page-socialcue, #page-savethewaves, #page-compoze, #page-dap, #page-2016charity, #page-2015charity, #page-2014charity {
+#page-itsaight, #page-paulrand, #page-wordsatwar, #page-socialcue, #page-savethewaves, #page-compoze, #page-dap, #page-2016charity, #page-2015charity, #page-2014charity, #page-pathfinder {
     position: relative;
     display: none;
 }
