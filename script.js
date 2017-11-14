@@ -148,9 +148,9 @@ document.addEventListener("DOMContentLoaded", function() {
         pagesavethewaves.style.display = 'none';
         pagecompoze.style.display = 'none';
         pagedap.style.display = 'none';
-        page2016charity.display = 'none';
-        page2015charity.display = 'none';
-        page2014charity.display = 'none';
+        page2016charity.style.display = 'none';
+        page2015charity.style.display = 'none';
+        page2014charity.style.display = 'none';
 
     });
 
