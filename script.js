@@ -3,18 +3,21 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed");
 
-    var loader = document.getElementById('loader');
+
 
     //loading screen before guest can enter site
     window.onload = function() {
-      // loader.style.height = '0px';
-      loader.className= 'fadeout';
-      tipTimer = setTimeout(nodisplay, 1000);
+        var loader = document.getElementById('loader');
+
+        loader.className = 'fadeout';
+        tipTimer = setTimeout(nodisplay, 1000);
+        var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+        console.log('Page load time is ' + loadTime);
     };
 
     //gives opcaity animation enough time to play out before display clears
-    function nodisplay (){
-      loader.style.display= 'none';
+    function nodisplay() {
+        loader.style.display = 'none';
     };
 
     //NAVIGATION LINKS
@@ -45,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         //fade in works page
         workspage.className = 'fadein';
-        workspage.style.zIndex = '2';
+        workspage.style.zIndex = '3';
         navworks.style.backgroundColor = '#FFE98F';
 
     });
@@ -76,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         bodyscroll.style.overflow = 'scroll';
         workspage.className = 'fadein';
-        workspage.style.zIndex = '2';
+        workspage.style.zIndex = '3';
         navworks.style.backgroundColor = '#FFE98F';
 
     });
@@ -290,6 +293,13 @@ document.addEventListener("DOMContentLoaded", function() {
         pagepathfinder.style.display = 'block';
 
     });
+
+
+
+
+
+
+
 
 
 });
