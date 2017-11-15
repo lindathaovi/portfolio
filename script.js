@@ -5,11 +5,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var loader = document.getElementById('loader');
 
-
+    //loading screen before guest can enter site
     window.onload = function() {
-      loader.style.height = '0px';
+      // loader.style.height = '0px';
+      loader.className= 'fadeout';
+      tipTimer = setTimeout(nodisplay, 1000);
+    };
 
-
+    //gives opcaity animation enough time to play out before display clears
+    function nodisplay (){
+      loader.style.display= 'none';
     };
 
     //NAVIGATION LINKS
