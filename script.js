@@ -3,6 +3,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed");
 
+    var loader = document.getElementById('loader');
+
+
+    window.onload = function() {
+      loader.style.height = '0px';
+
+
+    };
+
     //NAVIGATION LINKS
 
     //capture links by ID into variable
@@ -276,13 +285,6 @@ document.addEventListener("DOMContentLoaded", function() {
         pagepathfinder.style.display = 'block';
 
     });
-
-
-
-
-
-
-
 
 
 });
