@@ -130,6 +130,11 @@ header {
     transition: opacity .5s ease-in;
 }
 
+.filler{
+  background-color: white;
+  width:500px;
+}
+
 
 /*===== NAVIGATION ====*/
 
@@ -524,7 +529,7 @@ main a {
     width: 100%;
 }
 
-#page-itsaight, #page-paulrand, #page-wordsatwar, #page-socialcue, #page-savethewaves, #page-compoze, #page-dap, #page-2016charity, #page-2015charity, #page-2014charity, #page-pathfinder {
+#page-itsaight, #page-paulrand, #page-wordsatwar, #page-socialcue, #page-dui, #page-savethewaves, #page-compoze, #page-dap, #page-2016charity, #page-2015charity, #page-2014charity, #page-pathfinder {
     position: relative;
     display: none;
 }
