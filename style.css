@@ -391,14 +391,23 @@ main a {
 
 .contactlink {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     height: 100%;
-    margin-top: 50px;
+    /*margin-top: 70px;*/
 }
 
-#contactpage img {
+.contactlink a{
+  background-color: transparent;
+  margin-left:10px;
+}
+
+.contactlink img{
+  width:50px;
+}
+
+#contactportrait{
     width: 200px;
 }
 
